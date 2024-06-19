@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ klub.nazev }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ klub.nazev }}</h1>
+        <p>Rok založení: {{ klub.zalozeni }}</p>
+        <p>Místo: {{ klub.misto }}</p>
+        <p>Logo: <img src="{{ klub.logo.url }}"> </p>
+        <a href="{% url 'list.html' %}">Zpět na seznam klubů</a>
+    </div>
+</body>
+</html>

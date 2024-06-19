@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <style>
+        nav {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'hrac_list.html' %}">Hráči</a>
+        <a href="{% url 'list.html' %}">Kluby</a>
+        <a href="{% url 'zapas_list.html' %}">Zápasy</a>
+    </nav>
+</body>
+</html>

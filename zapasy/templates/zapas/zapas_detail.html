@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zápas: {{ zapas.nazev }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Zápas: {{ zapas.nazev }}</h1>
+        <p>Datum: {{ zapas.datum }}</p>
+        <p>Domácí tým: {{ zapas.domaci_tym }}</p>
+        <p>Skóre domácího týmu: {{ zapas.domaci_skore }}</p>
+        <p>Hostující tým: {{ zapas.hostujici_tym }}</p>
+        <p>Skóre domácího týmu: {{ zapas.hostujici_skore }}</p>
+        
+        <a href="{% url 'zapas_list.html' %}">Zpět na seznam zápasů</a>
+    </div>
+</body>
+</html>

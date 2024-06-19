@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ hrac.jmeno }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>{{ hrac.jmeno }} {{ hrac.prijmeni }}</h1>
+    <p>Klub: {{ hrac.klub }}</p>
+    <p>Narození: {{ hrac.narozeni }}</p>
+    <p>Fotka:  <img src="{{ hrac.fotka.url }}"> </p>
+    <a href="{% url 'hrac_list.html' %}">Zpět na seznam hráčů</a>
+</body>
+</html
